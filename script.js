@@ -6,7 +6,6 @@ function toggleTheme() {
     const isDark = body.classList.toggle('darkTheme');
     body.classList.toggle('lightTheme', !isDark);
 
-    // Animate transition
     body.style.transition = 'background 0.6s cubic-bezier(.4,2,.2,1), color 0.4s';
 
     if (isDark) {
@@ -73,4 +72,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-  
