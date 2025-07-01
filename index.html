@@ -23,6 +23,29 @@
             background: radial-gradient(circle at 30% 20%, #2a024b 0%, #11001F 100%);
             color: white;
         }
+        .icon-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem; /* or w-12 in Tailwind */
+            aspect-ratio: 1 / 1;
+            border: 1px solid #b820e6;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.5s;
+}
+
+      .icon-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}      
+        .lightTheme .icon-card {
+             background: white;
+}
+
+       .darkTheme .icon-card {
+             background: #1e0033;
+}
         .darkTheme .card {
             background: linear-gradient(135deg, #1e0033 60%, #3c0e60 100%);
             color: white;
@@ -112,7 +135,7 @@
         /* Make sure all headings are bold and highly visible in light mode */
         .lightTheme h1, .lightTheme h2, .lightTheme h3, .lightTheme h4 {
             color: #1c1c1c !important;
-            text-shadow: 0 1px 0 #fff, 0 2px 10px rgba(200,200,255,0.08);
+            text-shadow: 0 1px 1px #ccc, 0 2px 6px rgba(0, 0, 0, 0.08);
         }
         .lightTheme .section-content-text {
            color: #232323 !important;
@@ -125,9 +148,11 @@
             -webkit-text-fill-color: transparent;
              background-clip: text;
              text-fill-color: transparent;
+             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
 }
         .lightTheme .neon-btn {
             color: #b820e6 !important;
+            border-color: #b820e6;
             font-weight: 600;
             text-shadow: 0 1px 0 #fff, 0 2px 6px rgba(0,0,0,0.06);
 }
@@ -264,22 +289,22 @@
                 </ul>
                 <h4 class="my-6 text-[#b820e6] font-ovo">Tools I Use</h4>
                 <ul class="flex items-center gap-3 sm:gap-5">
-                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-[#b820e6] rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-lg duration-500 transition bg-white dark:bg-[#1e0033]">
-                        <img src="./images/vs_code.png" alt="" class="w-5 sm:w-7">
+                    <li class="icon-card light-theme-icon">
+                        <img src="./images/vs_code.png" alt="" class="w-5 sm:w-7" />
                     </li>
-                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-[#b820e6] rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-lg duration-500 transition bg-white dark:bg-[#1e0033]">
-                        <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7">
+                    <li class="icon-card light-theme-icon">
+                        <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7" />
                     </li>
-                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-[#b820e6] rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-lg duration-500 transition bg-white dark:bg-[#1e0033]">
-                        <img src="./images/figma.png" alt="" class="w-5 sm:w-7">
+                    <li class="icon-card light-theme-icon">
+                        <img src="./images/figma.png" alt="" class="w-5 sm:w-7" />
                     </li>
-                     <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-[#b820e6] rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-lg duration-500 transition bg-white dark:bg-[#1e0033]">
-                        <img src="./images/git.png" alt="" class="light-only w-5 sm:w-7 style="filter: brightness(0) contrast(200%);">
-                        <img src="./images/pajamas--git.png" alt="" class="dark-only w-5 sm:w-7">
+                     <li class="icon-card light-theme-icon">
+                        <img src="./images/git.png" alt="" class="light-only w-5 sm:w-7 style="filter: brightness(0) contrast(200%);" />
+                        <img src="./images/pajamas--git.png" alt="" class="dark-only w-5 sm:w-7" />
                     </li>
-                     <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-[#b820e6] rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-lg duration-500 transition bg-white dark:bg-[#1e0033]">
-                        <img src="./images/github.png" alt="" class="light-only w-5 sm:w-7 style="filter: brightness(0) contrast(200%);">
-                        <img src="./images/mingcute--github-fill.png" alt="" class="dark-only w-5 sm:w-7">
+                     <li class="icon-card light-theme-icon">
+                        <img src="./images/github.png" alt="" class="light-only w-5 sm:w-7 style="filter: brightness(0) contrast(200%);" />
+                        <img src="./images/mingcute--github-fill.png" alt="" class="dark-only w-5 sm:w-7" />
                     </li>
                 </ul>
             </div>
