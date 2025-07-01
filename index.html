@@ -43,6 +43,22 @@
         .darkTheme .section-accent-bg {
             background: #0f0f0f;
         }
+      .lightTheme .show-more-visible {
+         color: #1c1c1c !important;
+         background-color: rgba(255, 255, 255, 0.85);
+         backdrop-filter: blur(4px);
+         font-weight: 700;
+         text-shadow: 0 1px 1px #ffffffaa;
+         border: 2px solid #b820e6;
+         transition: all 0.3s ease;
+}
+
+      .lightTheme .show-more-visible:hover {
+          background: linear-gradient(90deg, #b820e6, #da7d20);
+          color: white !important;
+          box-shadow: 0 0 10px #b820e6, 0 0 30px #da7d20;
+}
+
         .light-only{
             display: inline-block;
         }
@@ -387,18 +403,12 @@
                 </div>
             </a>
         </div>
-        <a href="#"
-   class="group w-max flex items-center justify-center gap-2 
-          text-[#9300b5] dark:text-white 
-          border border-[#b820e6] rounded-full 
-          py-3 px-10 mx-auto my-10 
-          hover:bg-gradient-to-r hover:from-[#b820e6] hover:to-[#da7d20] 
-          hover:text-white font-bold neon-btn transition drop-shadow-sm">
+       <a href="#"
+   class="group show-more-visible neon-btn rounded-full py-3 px-10 mx-auto my-10 flex items-center justify-center gap-2 w-max">
    Show more
-   <img src="./images/right_arrow.jpg" alt="" class="w-4 group-hover:translate-x-1 transition block dark:hidden" />
-   <img src="./images/line-md--arrow-right.png" alt="" class="w-4 group-hover:translate-x-1 transition hidden dark:block" />
+   <img src="./images/right_arrow.jpg" alt="" class="w-4 group-hover:translate-x-1 transition light-only" />
+   <img src="./images/line-md--arrow-right.png" alt="" class="w-4 group-hover:translate-x-1 transition dark-only" />
 </a>
-
     </div>
 
     <!-- Contact Section -->
